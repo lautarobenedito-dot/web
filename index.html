@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critters Night</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-ball"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="brand-container">
+      <span class="brand-logo">CN</span>
+      <div>
+        <p class="brand-label">Critters Night</p>
+        <span class="brand-subtitle">Misterio indie</span>
+      </div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#juego">Juego</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#personajes">Personajes</a></li>
+        <li><a href="#creadores">Creadores</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">Lanzamiento exclusivo</span>
+        <h1>Critters Night</h1>
+        <p class="hero-text">Adéntrate en una aventura nocturna donde la oscuridad oculta secretos, criaturas misteriosas y lugares por descubrir.</p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="btnPlay">Explorar mundo</button>
+          <button class="btn btn-secondary" id="btnLore">Ver historia</button>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <span>35+</span>
+            <p>Guaridas</p>
+          </div>
+          <div>
+            <span>8</span>
+            <p>Personajes</p>
+          </div>
+          <div>
+            <span>1</span>
+            <p>Mundo vivo</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-card">
+          <div class="hero-card-light"></div>
+          <div class="hero-card-shape"></div>
+          <div class="hero-card-symbol">?</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid" id="juego">
+      <article class="info-card fade-item">
+        <h2>Juego</h2>
+        <p>Un viaje inmersivo con puzzles nocturnos y desafíos ambientales que invitan a explorar cada sombra.</p>
+      </article>
+      <article class="info-card fade-item">
+        <h2>Historia</h2>
+        <p>Descubre el pasado oculto de Critters Night y revela los secretos que cambiaron la noche.</p>
+      </article>
+      <article class="info-card fade-item">
+        <h2>Personajes</h2>
+        <p>Conoce a un grupo de héroes curiosos, cada uno con habilidades únicas y una personalidad memorable.</p>
+      </article>
+      <article class="info-card fade-item">
+        <h2>Creadores</h2>
+        <p>Un equipo indie apasionado creó esta experiencia con arte oscuro, música envolvente y sentido del descubrimiento.</p>
+      </article>
+    </section>
+
+    <section class="story-section" id="historia">
+      <div class="story-content fade-item">
+        <span class="section-label">Historia</span>
+        <h2>Un misterio bajo las estrellas</h2>
+        <p>Durante una noche sin luna, Critters Night despierta en un bosque donde cada sonido y cada luz cuentan una historia. Tu misión es guiar a los pequeños héroes mientras descubren ruinas antiguas, criaturas de luz y pistas enterradas.</p>
+        <button class="btn btn-tertiary" id="btnLoreMore">Más detalles</button>
+      </div>
+      <div class="story-visual fade-item">
+        <div class="story-card">
+          <div class="story-card-glow"></div>
+          <p>Explora, comprende y protege tu mundo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="character-section" id="personajes">
+      <div class="section-header fade-item">
+        <span class="section-label">Personajes</span>
+        <h2>Héroes de la noche</h2>
+      </div>
+
+      <div class="character-grid fade-item">
+        <article class="character-card">
+          <h3>Luna</h3>
+          <p>Exploradora que sigue las luces ocultas y abre caminos nuevos.</p>
+        </article>
+        <article class="character-card">
+          <h3>Rho</h3>
+          <p>Guardián silencioso que escucha los susurros del bosque.</p>
+        </article>
+        <article class="character-card">
+          <h3>Nyx</h3>
+          <p>Maestro de sombras que transforma la oscuridad en ventaja.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="creadores">
+    <p>Critters Night • Creado por un estudio indie que ama el misterio y la exploración.</p>
+    <p>Diseño pensada para aprender HTML, CSS y JavaScript de forma clara.</p>
+  </footer>
+
+  <div class="toast" id="toastMessage" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
