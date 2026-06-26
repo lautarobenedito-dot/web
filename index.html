@@ -3,140 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Critters Night</title>
+  <title>Critters Night — Guía Analógica</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-loader" id="pageLoader" aria-hidden="true">
-    <div class="loader-ball"></div>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">CN</span>
+        <div>
+          <p class="brand-title">Critters Night</p>
+          <p class="brand-subtitle">Playtime Co. / Horror Analógico</p>
+        </div>
+      </div>
+
+      <nav class="tab-list" role="tablist" aria-label="Secciones principales">
+        <button class="tab-btn active" role="tab" aria-selected="true" data-target="inicio">Inicio / Historia</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-target="personajes">Personajes</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-target="mecanicas">Mecánicas</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-target="mapa">Mapa de la Tienda</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-target="saga">La Saga</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="tab-panel active" id="inicio" role="tabpanel" aria-labelledby="inicio-tab">
+        <div class="panel-header">
+          <div>
+            <span class="section-label">Origen oscuro</span>
+            <h1>La noche en que Playtime Co. cayó</h1>
+          </div>
+          <p class="panel-tag">Elliot Ludwig, 1950-60 / La Hora de la Alegría, 8 de agosto de 1995</p>
+        </div>
+
+        <div class="panel-grid">
+          <article class="panel-card">
+            <h2>El nacimiento de Playtime Co.</h2>
+            <p>En los años 50 y 60, Elliot Ludwig creó Playtime Co. como una fábrica de juguetes infantiles. Tras décadas de marketing retro y anuncios en blanco y negro, la empresa guardó un secreto aún más siniestro: experimentos con niños disfrazados de diversión.</p>
+          </article>
+
+          <article class="panel-card">
+            <h2>La Hora de la Alegría</h2>
+            <p>El 8 de agosto de 1995, un evento catastrófico conocido como la Hora de la Alegría transformó la tienda en un laberinto de terror. Un apagón masivo y un ritual olvidado desataron fuerzas que deformaron juguetes y cuerpos por igual.</p>
+          </article>
+
+          <article class="panel-card wide-card">
+            <h2>El secreto prohibido</h2>
+            <p>Los registros ocultos revelan que los niños visitantes eran parte de un programa de experimentación psicológica. Los prototipos originales no eran simples mascotas: eran sujetos en un oscuro intento de mezclar inocencia y control.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="personajes" role="tabpanel" aria-labelledby="personajes-tab">
+        <div class="panel-header">
+          <div>
+            <span class="section-label">Doble identidad</span>
+            <h1>Versión 1 vs Versión 2</h1>
+          </div>
+          <p class="panel-tag">La evolución atroz de los Critters</p>
+        </div>
+
+        <div class="panel-grid split-grid">
+          <article class="panel-card">
+            <h2>Versión 1</h2>
+            <p>Critters buenos, de 1.5 metros, creados para ser compañeros y sobrevivientes. Estos prototipos son lentos pero resilientes, y todavía guardan rastros de su humanidad perdida.</p>
+            <ul>
+              <li>Bubba: líder de los sobrevivientes.</li>
+              <li>Catnap: sigiloso y atento.</li>
+              <li>Dogday: protector territorial.</li>
+            </ul>
+          </article>
+
+          <article class="panel-card alt-card">
+            <h2>Versión 2</h2>
+            <p>Mutados por la Hora de la Alegría, alcanzan los 7 metros de altura y se vuelven agresivos. Estas aberraciones han olvidado su propósito original y cazan a cualquier intruso con ferocidad.</p>
+            <ul>
+              <li>Baba Chops: mordaz y sedienta de caos.</li>
+              <li>Licky Icky: veloz, con lengua afilada.</li>
+              <li>Poe: sombra tormentosa entre pasillos.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="group-grid">
+          <article class="group-card">
+            <h3>Smiling Critters</h3>
+            <p>Falsas sonrisas que ocultan patrones compulsivos. En V1 eran aliados, en V2 son trampas vivientes.</p>
+          </article>
+          <article class="group-card">
+            <h3>Frowning Critters</h3>
+            <p>Fruncen el ceño como señal de amenaza inminente. Prefieren acechar desde un rincón oscuro.</p>
+          </article>
+          <article class="group-card">
+            <h3>Nightmare Critters</h3>
+            <p>Formas distorsionadas de pesadilla. Su sola presencia distorsiona la vigilancia y la calma.</p>
+          </article>
+          <article class="group-card">
+            <h3>Daydream Critters</h3>
+            <p>Arquetipos de alegría derrotada. Su brillo simulado es una trampa para quienes buscan refugio.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="mecanicas" role="tabpanel" aria-labelledby="mecanicas-tab">
+        <div class="panel-header">
+          <div>
+            <span class="section-label">Supervivencia</span>
+            <h1>Mecánicas y objetos</h1>
+          </div>
+          <p class="panel-tag">Tres herramientas para no desaparecer</p>
+        </div>
+
+        <div class="mechanic-grid">
+          <article class="panel-card icon-card">
+            <span class="icon">🔦</span>
+            <h2>Linterna</h2>
+            <p>La linterna rompe la oscuridad, revela rutas secretas y ralentiza a los Critters. Sin ella, cada paso puede ser mortal.</p>
+          </article>
+
+          <article class="panel-card icon-card">
+            <span class="icon">🎧</span>
+            <h2>Auriculares antisonido</h2>
+            <p>Bloquean las frecuencias que atraen a los mutantes. Úsalos para atravesar zonas con ruido de máquinas o gritos distorsionados.</p>
+          </article>
+
+          <article class="panel-card icon-card">
+            <span class="icon">💻</span>
+            <h2>Computadora de vigilancia</h2>
+            <p>Monitorea cámaras y puertas. Controlar la tienda desde la pantalla evita encuentros directos y te permite planear rutas seguras.</p>
+          </article>
+        </div>
+
+        <div class="panel-card wide-card">
+          <h2>Consejos de supervivencia</h2>
+          <ul>
+            <li>Conserva batería y alterna la linterna entre zonas seguras.</li>
+            <li>Activa los auriculares cuando escuches pasos metálicos o risas.</li>
+            <li>Regresa a la computadora siempre que las cámaras indiquen movimiento en el pasillo.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="mapa" role="tabpanel" aria-labelledby="mapa-tab">
+        <div class="panel-header">
+          <div>
+            <span class="section-label">Topología</span>
+            <h1>Mapa de la tienda</h1>
+          </div>
+          <p class="panel-tag">Cinco zonas con rutas peligrosas</p>
+        </div>
+
+        <div class="map-grid">
+          <article class="map-card">
+            <h2>Tienda</h2>
+            <p>La entrada principal y el corazón del terror. Encuentras juguetes, pistas y trampas ocultas entre exhibidores polvorientos.</p>
+          </article>
+          <article class="map-card">
+            <h2>Almacén</h2>
+            <p>Un laberinto oscuro con estanterías rotas y cajas apiladas. Ideal para esconderse, pero fácil perderse.</p>
+          </article>
+          <article class="map-card">
+            <h2>Entrega</h2>
+            <p>Zona de carga donde llegan los paquetes malditos. Ruidos, palés y vehículos abandonados hacen del lugar una trampa móvil.</p>
+          </article>
+          <article class="map-card">
+            <h2>Pasillo</h2>
+            <p>Conecta cada área y concentra la mayoría de emboscadas. Mantente alerta y usa la computadora para anticipar cruces.</p>
+          </article>
+          <article class="map-card">
+            <h2>Oficina</h2>
+            <p>El refugio temporal. Aquí se almacenan los documentos de los experimentos y se reponen baterías.</p>
+          </article>
+        </div>
+
+        <div class="route-grid">
+          <article class="route-card">
+            <h3>Catnap</h3>
+            <p>Recorrido sigiloso entre la Tienda y el Almacén. Perfecto para evitar confrontaciones directas.</p>
+          </article>
+          <article class="route-card">
+            <h3>Dogday</h3>
+            <p>Ruta defensiva que cruza la Oficina. Recomendado cuando buscas soporte adicional y algo de tranquilidad.</p>
+          </article>
+          <article class="route-card">
+            <h3>Baba Chops</h3>
+            <p>Camino brutal entre Entrega y Pasillo. Evítalo si no quieres enfrentarte a uno de los mutantes más agresivos.</p>
+          </article>
+          <article class="route-card">
+            <h3>Licky Icky</h3>
+            <p>Atajo veloz y traicionero. Solo para jugadores que controlen bien el ritmo y la línea de visión.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="saga" role="tabpanel" aria-labelledby="saga-tab">
+        <div class="panel-header">
+          <div>
+            <span class="section-label">Cronología</span>
+            <h1>La saga de los cuatro juegos</h1>
+          </div>
+          <p class="panel-tag">Bubba, Rabie, Poe y Byron</p>
+        </div>
+
+        <div class="saga-grid">
+          <article class="saga-card">
+            <h2>Juego 1 — Bubba</h2>
+            <p>Bubba enfrenta la Tienda original y sobrevive con heridas profundas. Su final revela que su voluntad y su miedo estaban conectados.</p>
+          </article>
+          <article class="saga-card">
+            <h2>Juego 2 — Rabie</h2>
+            <p>Rabie descubre la extensión del experimento. Su cuerpo marca cicatrices de pelea y su final muestra un escape a medias, con recuerdos rotos.</p>
+          </article>
+          <article class="saga-card">
+            <h2>Juego 3 — Poe</h2>
+            <p>Poe explora los rincones más oscuros de la Oficina. Sufre mutilaciones mentales y termina sabiendo más de lo que debería.</p>
+          </article>
+          <article class="saga-card">
+            <h2>Juego 4 — Byron</h2>
+            <p>Byron resiste la mutación final. Su final real está envuelto en rituales quebrados y en la posibilidad de que nada termine.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Diseño inspirado en terror analógico, tiendas abandonadas y monitores VHS. Todas las pistas están ocultas en la sombra.</p>
+    </footer>
   </div>
-
-  <header class="site-header">
-    <div class="brand-container">
-      <span class="brand-logo">CN</span>
-      <div>
-        <p class="brand-label">Critters Night</p>
-        <span class="brand-subtitle">Misterio indie</span>
-      </div>
-    </div>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="main-nav" id="mainNav">
-      <ul>
-        <li><a href="#juego">Juego</a></li>
-        <li><a href="#historia">Historia</a></li>
-        <li><a href="#personajes">Personajes</a></li>
-        <li><a href="#creadores">Creadores</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-copy">
-        <span class="eyebrow">Lanzamiento exclusivo</span>
-        <h1>Critters Night</h1>
-        <p class="hero-text">Adéntrate en una aventura nocturna donde la oscuridad oculta secretos, criaturas misteriosas y lugares por descubrir.</p>
-
-        <div class="hero-actions">
-          <button class="btn btn-primary" id="btnPlay">Explorar mundo</button>
-          <button class="btn btn-secondary" id="btnLore">Ver historia</button>
-        </div>
-
-        <div class="hero-stats">
-          <div>
-            <span>35+</span>
-            <p>Guaridas</p>
-          </div>
-          <div>
-            <span>8</span>
-            <p>Personajes</p>
-          </div>
-          <div>
-            <span>1</span>
-            <p>Mundo vivo</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-glow"></div>
-        <div class="hero-card">
-          <div class="hero-card-light"></div>
-          <div class="hero-card-shape"></div>
-          <div class="hero-card-symbol">?</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="info-grid" id="juego">
-      <article class="info-card fade-item">
-        <h2>Juego</h2>
-        <p>Un viaje inmersivo con puzzles nocturnos y desafíos ambientales que invitan a explorar cada sombra.</p>
-      </article>
-      <article class="info-card fade-item">
-        <h2>Historia</h2>
-        <p>Descubre el pasado oculto de Critters Night y revela los secretos que cambiaron la noche.</p>
-      </article>
-      <article class="info-card fade-item">
-        <h2>Personajes</h2>
-        <p>Conoce a un grupo de héroes curiosos, cada uno con habilidades únicas y una personalidad memorable.</p>
-      </article>
-      <article class="info-card fade-item">
-        <h2>Creadores</h2>
-        <p>Un equipo indie apasionado creó esta experiencia con arte oscuro, música envolvente y sentido del descubrimiento.</p>
-      </article>
-    </section>
-
-    <section class="story-section" id="historia">
-      <div class="story-content fade-item">
-        <span class="section-label">Historia</span>
-        <h2>Un misterio bajo las estrellas</h2>
-        <p>Durante una noche sin luna, Critters Night despierta en un bosque donde cada sonido y cada luz cuentan una historia. Tu misión es guiar a los pequeños héroes mientras descubren ruinas antiguas, criaturas de luz y pistas enterradas.</p>
-        <button class="btn btn-tertiary" id="btnLoreMore">Más detalles</button>
-      </div>
-      <div class="story-visual fade-item">
-        <div class="story-card">
-          <div class="story-card-glow"></div>
-          <p>Explora, comprende y protege tu mundo.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="character-section" id="personajes">
-      <div class="section-header fade-item">
-        <span class="section-label">Personajes</span>
-        <h2>Héroes de la noche</h2>
-      </div>
-
-      <div class="character-grid fade-item">
-        <article class="character-card">
-          <h3>Luna</h3>
-          <p>Exploradora que sigue las luces ocultas y abre caminos nuevos.</p>
-        </article>
-        <article class="character-card">
-          <h3>Rho</h3>
-          <p>Guardián silencioso que escucha los susurros del bosque.</p>
-        </article>
-        <article class="character-card">
-          <h3>Nyx</h3>
-          <p>Maestro de sombras que transforma la oscuridad en ventaja.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" id="creadores">
-    <p>Critters Night • Creado por un estudio indie que ama el misterio y la exploración.</p>
-    <p>Diseño pensada para aprender HTML, CSS y JavaScript de forma clara.</p>
-  </footer>
-
-  <div class="toast" id="toastMessage" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>

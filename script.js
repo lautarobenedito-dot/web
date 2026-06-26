@@ -1,55 +1,34 @@
-// script.js
-// Código JavaScript para el menú responsive y las interacciones de la página.
+﻿const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
 
-const menuToggle = document.getElementById('menuToggle');
-const mainNav = document.getElementById('mainNav');
-const toast = document.getElementById('toastMessage');
-const pageLoader = document.getElementById('pageLoader');
+function activateTab(targetId) {
+  tabButtons.forEach((button) => {
+    const isActive = button.dataset.target === targetId;
+    button.classList.toggle('active', isActive);
+    button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
 
-const showToast = (message) => {
-  toast.textContent = message;
-  toast.classList.add('show');
+  tabPanels.forEach((panel) => {
+    panel.classList.toggle('active', panel.id === targetId);
+  });
+}
 
-  window.setTimeout(() => {
-    toast.classList.remove('show');
-  }, 2200);
-};
+tabButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    activateTab(button.dataset.target);
+  });
 
-menuToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('open');
+  button.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      const currentIndex = Array.prototype.indexOf.call(tabButtons, event.currentTarget);
+      const nextIndex = event.key === 'ArrowRight'
+        ? (currentIndex + 1) % tabButtons.length
+        : (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+      tabButtons[nextIndex].focus();
+    }
+  });
 });
 
-const buttons = [
-  {
-    id: 'btnPlay',
-    message: 'Listo para explorar la noche. ¡Que comience la aventura!'
-  },
-  {
-    id: 'btnLore',
-    message: 'La historia se revela con cada paso en el bosque misterioso.'
-  },
-  {
-    id: 'btnLoreMore',
-    message: 'Más detalles desbloqueados. Pronto habrá nuevas misiones.'
-  }
-];
-
-buttons.forEach((buttonConfig) => {
-  const button = document.getElementById(buttonConfig.id);
-  if (button) {
-    button.addEventListener('click', () => {
-      showToast(buttonConfig.message);
-    });
-  }
-});
-
-window.addEventListener('load', () => {
-  pageLoader.classList.add('hidden');
-});
-
-// Cerrar el menú cuando el usuario hace clic en un enlace de navegación.
-mainNav.addEventListener('click', (event) => {
-  if (event.target.matches('a')) {
-    mainNav.classList.remove('open');
-  }
+window.addEventListener('DOMContentLoaded', () => {
+  activateTab('inicio');
 });
